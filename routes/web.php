@@ -33,8 +33,11 @@ Route::get('post/{id}', function (string $id) {
     return view('post', compact('id'));
 })->name('post');
 
-Route::view('profile', 'profile')
-    ->middleware(['auth'])
-    ->name('profile');
+Route::middleware([
+    'auth',
+])->group(function () {
+    Route::view('profile', 'profile')
+        ->name('profile');
+});
 
 require __DIR__.'/auth.php';
