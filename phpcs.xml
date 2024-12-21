@@ -2,7 +2,10 @@
 <ruleset name="Custom Standard">
     <description>Custom PHPCS rules for my project</description>
     <rule ref="PSR12"/>
+
     <!-- Exclude specific rules -->
-    <exclude name="PEAR.Commenting.FileComment.Missing"/>
-    <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceAfter"/>
+    <rule ref="PSR12.Operators.OperatorSpacing">
+        <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceBefore"/>
+        <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceAfter"/>
+    </rule>
 </ruleset>
