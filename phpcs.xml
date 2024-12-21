@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ruleset name="Custom Standard">
+    <description>Custom PHPCS rules for my project</description>
+    <rule ref="PSR12"/>
+    <!-- Exclude specific rules -->
+    <exclude name="PEAR.Commenting.FileComment.Missing"/>
+    <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceAfter"/>
+</ruleset>
