@@ -48,6 +48,15 @@ new class extends Component
                     <x-nav-link :href="route('news')" :active="request()->routeIs('news')" wire:navigate>
                         Berita
                     </x-nav-link>
+
+                    @auth
+
+                    <x-nav-link :href="route('position-data')" :active="request()->routeIs('position-data')" wire:navigate>
+                        Pengurus
+                    </x-nav-link>
+
+                    @endauth
+
                 </div>
             </div>
 

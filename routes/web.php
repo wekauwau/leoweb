@@ -38,6 +38,9 @@ Route::middleware([
 ])->group(function () {
     Route::view('profile', 'profile')
         ->name('profile');
+
+    Route::view('position-data', 'position-data')
+        ->name('position-data');
 });
 
 require __DIR__.'/auth.php';

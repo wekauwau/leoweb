@@ -17,4 +17,9 @@ class Position extends Pivot
     {
         return $this->belongsTo(Member::class);
     }
+
+    public function executive(): BelongsTo
+    {
+        return $this->belongsTo(Executive::class);
+    }
 }
